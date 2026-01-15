@@ -1,0 +1,5 @@
+/* SakuLabo base */
+body { font-family: system-ui, -apple-system, "Zen Kaku Gothic New", sans-serif; max-width: 720px; margin: 24px auto; line-height: 1.8; }
+.q { margin: 16px 0; padding: 12px; border: 1px solid #ddd; border-radius: 12px; }
+.result { margin-top: 20px; padding: 16px; border-radius: 12px; background: #f6f9ff; display: none; }
+button { padding: 10px 16px; border-radius: 10px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
