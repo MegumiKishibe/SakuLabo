@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get "sakura_study_path/index"
   root "home#index"
+
+  get "/sakura-study-path", to: "sakura_study_path#index", as: :sakura_study_path
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

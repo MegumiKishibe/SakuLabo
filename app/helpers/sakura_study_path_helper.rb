@@ -1,0 +1,2 @@
+module SakuraStudyPathHelper
+end
