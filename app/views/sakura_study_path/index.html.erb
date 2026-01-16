@@ -1,8 +1,35 @@
-<div class="container">
+<div class="container sakura-study-path">
   <div class="card">
     <h1 class="title">Sakura Study Path</h1>
-    <p class="subtitle">ここに質問項目を追加していきます。</p>
+    <p class="subtitle">当てはまる項目を5〜10個選んでください。</p>
 
-    <%= link_to "ホームへ戻る", root_path, class: "btn" %>
+    <div class="question">
+      <p class="hint"><span id="count">0</span>/10 選択（5個以上で結果表示）</p>
+
+      <div class="options">
+        <button type="button" class="option-btn" data-type="photo">写真みたいに鮮明に思い出せる</button>
+        <button type="button" class="option-btn" data-type="photo">図・写真があると理解が速い</button>
+
+        <button type="button" class="option-btn" data-type="3d">道順や場所を立体的に覚える</button>
+        <button type="button" class="option-btn" data-type="3d">顔の変化に気づきやすい</button>
+
+        <button type="button" class="option-btn" data-type="lang_movie">文章で情景が浮かぶ</button>
+        <button type="button" class="option-btn" data-type="lang_movie">見たものを言葉で表現しやすい</button>
+
+        <button type="button" class="option-btn" data-type="lang_abstract">図解・相関図にすると理解が深まる</button>
+        <button type="button" class="option-btn" data-type="lang_abstract">ノートを整理してまとめるのが得意</button>
+
+        <button type="button" class="option-btn" data-type="aud_lang">読むより聞くほうが理解しやすい</button>
+        <button type="button" class="option-btn" data-type="aud_sound">音色や音程の違いに敏感</button>
+      </div>
+
+      <button id="resultBtn" class="btn result-btn" type="button" disabled>診断結果を見る</button>
+
+      <div id="result" class="result" style="display:none;"></div>
+    </div>
+
+    <div class="actions">
+      <%= link_to "ホームへ戻る", root_path, class: "btn" %>
+    </div>
   </div>
 </div>

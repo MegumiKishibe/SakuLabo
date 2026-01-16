@@ -138,3 +138,76 @@ body {
   font-size: 13px;
   color: var(--muted);
 }
+/* ===============================
+   Sakura Study Path (static)
+=============================== */
+.question {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.7);
+}
+
+.question-title {
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.options {
+  display: grid;
+  gap: 10px;
+}
+
+.option-btn {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+  text-align: left;
+
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.option-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  border-color: rgba(90,42,74,0.22);
+}
+
+/* 選択中（④でJSから付ける） */
+.option-btn.is-selected {
+  border-color: rgba(90,42,74,0.35);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+}
+
+/* 結果ボタン（まだ押せない） */
+.result-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+.option-btn.is-selected {
+  border-color: rgba(90,42,74,0.35);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+}
+.result {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid var(--border);
+}
+
+.result-block + .result-block { margin-top: 14px; }
+
+.result-title { margin: 0 0 6px; font-size: 18px; }
+.result-lead { margin: 0 0 10px; color: var(--muted); }
+
+.result-sub { margin: 12px 0 6px; font-size: 14px; }
+.result-list { margin: 0; padding-left: 18px; }
+
+.result-note { margin: 0 0 12px; color: var(--muted); }
+.result-meta { margin: 12px 0 0; font-size: 12px; color: var(--muted); }
