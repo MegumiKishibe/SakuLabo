@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="light" lang="ja">
   <head>
     <title><%= content_for(:title) || "Saku Labo" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,15 +10,47 @@
 
     <%= yield :head %>
 
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
 
-    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CDN (static HTML方式) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "sakura-pink": "#FFD1DC",
+              "sakura-dark": "#F08080",
+              "sky-breeze": "#E0F2F7",
+              "ocean-deep": "#72A0C1",
+              "pure-white": "#FFFFFF",
+              "text-slate": "#4A5568",
+            },
+            fontFamily: {
+              display: ["Cormorant Garamond", "serif"],
+              sans: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+
+    <!-- 既存CSS -->
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+
+    <!-- LP専用CSS（新規） -->
+    <%= stylesheet_link_tag "sakulabo_lp", "data-turbo-track": "reload" %>
+
+    <!-- 既存JS -->
     <%= javascript_importmap_tags %>
   </head>
 
