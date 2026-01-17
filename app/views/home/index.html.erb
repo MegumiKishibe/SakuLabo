@@ -1,13 +1,350 @@
-<div class="container">
-  <div class="card">
-    <h1 class="title">Saku Labo</h1>
-    <p class="subtitle">
-      学習スタイルを知って、あなたに合う勉強法を見つけよう。
-    </p>
+<div class="sakulabo-lp bg-pure-white text-text-slate transition-colors duration-300">
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-sakura-pink/30">
+    <div class="w-full max-w-[1280px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-sakura-pink flex items-center justify-center rounded-full text-white shadow-sm">
+          <span class="material-symbols-outlined text-2xl">eco</span>
+        </div>
+        <h2 class="text-2xl font-elegant font-bold tracking-wide text-ocean-deep">SakuLabo</h2>
+      </div>
 
-    <div class="actions">
-      <%= link_to "Sakura Study Pathへ", sakura_study_path_path, class: "btn" %>
-      <p class="hint">※ クリックすると診断ページへ移動します</p>
+      <nav class="hidden md:flex items-center gap-10">
+        <a class="text-xs uppercase tracking-widest font-semibold hover:text-sakura-dark transition-colors" href="#">The Philosophy</a>
+        <a class="text-xs uppercase tracking-widest font-semibold hover:text-sakura-dark transition-colors" href="#">Curriculum</a>
+        <a class="text-xs uppercase tracking-widest font-semibold hover:text-sakura-dark transition-colors" href="#">Stories</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button class="bg-sakura-dark hover:bg-sakura-dark/90 text-white px-8 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all transform hover:translate-y-[-2px] shadow-md">
+          Enroll Now
+        </button>
+      </div>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden gradient-bg">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+        <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      </div>
+
+      <div class="max-w-[1280px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="flex flex-col gap-8 order-2 lg:order-1">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-pure-white/80 border border-sakura-pink/50 text-ocean-deep rounded-full text-[10px] font-bold uppercase tracking-[0.2em] w-fit">
+            <span class="w-1.5 h-1.5 bg-sakura-pink rounded-full"></span>
+            Spring Enrollment Open
+          </div>
+
+          <h1 class="text-6xl lg:text-8xl font-elegant leading-none text-ocean-deep">
+            Let your <span class="italic text-sakura-dark">potential</span> bloom.
+          </h1>
+
+          <p class="text-lg font-light leading-relaxed max-w-[500px] text-slate-500">
+            A gentle, personalized approach to education, inspired by the resilience and beauty of the cherry blossom.
+            Nurturing minds through the spring breeze of innovation.
+          </p>
+
+          <div class="flex flex-wrap gap-6 mt-4">
+            <button class="bg-ocean-deep text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest shadow-lg hover:bg-ocean-deep/90 transition-all">
+              Discover Your Path
+            </button>
+            <button class="bg-pure-white/60 border border-sakura-pink/30 px-10 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white transition-all">
+              Our Vision
+            </button>
+          </div>
+        </div>
+
+        <!-- 画像（img化） -->
+        <div class="relative order-1 lg:order-2">
+          <div class="absolute -top-12 -right-12 w-80 h-80 bg-sakura-pink/20 rounded-full blur-[80px]"></div>
+          <div class="absolute -bottom-12 -left-12 w-80 h-80 bg-sky-breeze/40 rounded-full blur-[80px]"></div>
+
+          <div class="relative z-10 w-full aspect-[4/5] rounded-[4rem] shadow-2xl border-[12px] border-white/50 overflow-hidden">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA4uZmx0Uc6c_Gda3zXuTPPHvUTnWNFCFBGJh-R3p1zTP4H9fheGJJ5I5RZPxYZ3kaCFjNXaCDCKDcCk_byPuJT6_MPtrNju3BDuIAvYVOlkUlaJnThriYOhBaM2mbNVkzoDbdeCQ9FbBFuBWMITslWVoT7FGY8KIcrHrP0k3JFeS4PpJSKlFYbAL_2kc2ZEiFnoxVI3GVM2ov4IegY-68eou16IUKeswQ9laZUd3-yaGFwL-TI5pScXne1mXacgYV_UIYlh-32q4"
+              alt="落ち着いた環境で学ぶ学生"
+              class="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-sakura-pink/10 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature -->
+    <section class="py-24 px-6 lg:px-12 relative bg-sky-breeze/30">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="flex flex-col items-center text-center mb-20">
+          <h2 class="text-5xl font-elegant text-ocean-deep mb-6">A Nurturing Environment</h2>
+          <p class="text-slate-500 max-w-xl font-light italic">
+            "Just as the sakura awaits the perfect breeze to bloom, we provide the ideal conditions for your growth."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div class="group breezy-overlay p-10 rounded-[3rem] border border-pure-white hover:border-sakura-pink/30 transition-all duration-500 shadow-sm hover:shadow-xl">
+            <div class="w-16 h-16 rounded-full bg-sakura-pink/20 text-sakura-dark flex items-center justify-center mb-8 group-hover:bg-sakura-pink group-hover:text-white transition-all duration-500">
+              <span class="material-symbols-outlined text-3xl">flare</span>
+            </div>
+            <h3 class="text-2xl font-elegant font-bold text-ocean-deep mb-4">Gentle Guidance</h3>
+            <p class="text-slate-500 font-light leading-relaxed">
+              Tailored mentorship that respects your natural pace, allowing your talents to unfurl naturally and beautifully.
+            </p>
+          </div>
+
+          <div class="group breezy-overlay p-10 rounded-[3rem] border border-pure-white hover:border-sakura-pink/30 transition-all duration-500 shadow-sm hover:shadow-xl">
+            <div class="w-16 h-16 rounded-full bg-sky-breeze text-ocean-deep flex items-center justify-center mb-8 group-hover:bg-ocean-deep group-hover:text-white transition-all duration-500">
+              <span class="material-symbols-outlined text-3xl">air</span>
+            </div>
+            <h3 class="text-2xl font-elegant font-bold text-ocean-deep mb-4">The Spring Breeze</h3>
+            <p class="text-slate-500 font-light leading-relaxed">
+              A refreshing curriculum designed to spark curiosity and blow away the stagnant methods of traditional learning.
+            </p>
+          </div>
+
+          <div class="group breezy-overlay p-10 rounded-[3rem] border border-pure-white hover:border-sakura-pink/30 transition-all duration-500 shadow-sm hover:shadow-xl">
+            <div class="w-16 h-16 rounded-full bg-sakura-pink/10 text-sakura-dark flex items-center justify-center mb-8 group-hover:bg-sakura-dark group-hover:text-white transition-all duration-500">
+              <span class="material-symbols-outlined text-3xl">diversity_1</span>
+            </div>
+            <h3 class="text-2xl font-elegant font-bold text-ocean-deep mb-4">Garden Community</h3>
+            <p class="text-slate-500 font-light leading-relaxed">
+              Join a vibrant ecosystem of learners where mutual support and collective blossoming are our highest values.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Select Your Branch (img化) -->
+    <section class="py-24 px-6 lg:px-12 bg-pure-white">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="text-center mb-20">
+          <h2 class="text-5xl font-elegant text-ocean-deep mb-4">Select Your Branch</h2>
+          <div class="w-24 h-1 bg-sakura-pink mx-auto rounded-full opacity-50"></div>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <%# 1 %>
+          <div class="group relative">
+            <div class="w-full aspect-[3/4] rounded-[2rem] overflow-hidden relative shadow-md transition-transform duration-500 group-hover:scale-[1.02]">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7rtwnvRLHh1ivctRwoqq8jJHWJ6TlxG3X4uJzcEAQg9UD6fmU0VxaMKGkv7F12O44AlTUic-biOAuhtbijOAX-ET0_QNmaoHK26-mvbtXX-p87kt0p-b-6vacGeZo99JgLJf6vKfWapDp0MQxm2qAMc8kDAeQSYd3Tg9257HVjD0nCrVKVxZK_LEpdhvh080PbPHkzY90KKpuwE7uV4eDRDeBDL2v0qmVNsMQXlPc5OEJeIUVeSmOZZa6fMX35NPJM427YWyk4E"
+                alt="Creative Arts"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-sakura-pink/20 group-hover:bg-sakura-pink/40 transition-all"></div>
+              <div class="absolute bottom-6 left-6 right-6 p-6 breezy-overlay rounded-2xl">
+                <p class="text-xl font-elegant font-bold text-ocean-deep">Creative Arts</p>
+                <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-1">12 Courses</p>
+              </div>
+            </div>
+          </div>
+
+          <%# 2 %>
+          <div class="group relative lg:mt-12">
+            <div class="w-full aspect-[3/4] rounded-[2rem] overflow-hidden relative shadow-md transition-transform duration-500 group-hover:scale-[1.02]">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaiPzjVXPK12ei6WanRm3Xb6tvSZzwhl8aY2NAgrHfWfcmqEkm_5DhXYJw5KtcI8r1E5sgC0lTJ3ZGNTAKNSmSjcjK_d5Zt9Sn0Bktkr7wloMbVjSIJF6PYv_XSMiFXg6If7bDqq4y2g6DfFUvC9IfWA1ajDIycUFGbOKsLAdav0gDFC9UHvScy0DpphR6aq9OmBvJLgP1pGUoL8t4V2eTmRXDk3Tzss78904bpClpv9TERaEq3anaWqc0srfMtfmhEpgPh1IV59M"
+                alt="Logic & Math"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-ocean-deep/10 group-hover:bg-ocean-deep/30 transition-all"></div>
+              <div class="absolute bottom-6 left-6 right-6 p-6 breezy-overlay rounded-2xl">
+                <p class="text-xl font-elegant font-bold text-ocean-deep">Logic &amp; Math</p>
+                <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-1">8 Courses</p>
+              </div>
+            </div>
+          </div>
+
+          <%# 3 %>
+          <div class="group relative">
+            <div class="w-full aspect-[3/4] rounded-[2rem] overflow-hidden relative shadow-md transition-transform duration-500 group-hover:scale-[1.02]">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBzD7Z-Hd5-izJRvRAYR6aYVF0eH4EHaTsk7nzpqhXCszOTkAD2D1bb64lF0P5Dhn-vzYfGlWo-gpxtft9L5GaD7Kt6q4EIOcXQqT3QyOcwpGWG69QWJDBhIwaIgGndbxzMh0CuArsI2JUoIKII36dqloZugjY-4ST3TZTIVifaOPG8mVo1EpMFeUVk9ley9NXGPZGsi67TgAI3w7AcTDZLyuh2cjGqjajNg318putWjSTIq1j-wAu9usXpAcxBojWmGtEV1r2yeY"
+                alt="Language Arts"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-sakura-pink/20 group-hover:bg-sakura-pink/40 transition-all"></div>
+              <div class="absolute bottom-6 left-6 right-6 p-6 breezy-overlay rounded-2xl">
+                <p class="text-xl font-elegant font-bold text-ocean-deep">Language Arts</p>
+                <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-1">15 Courses</p>
+              </div>
+            </div>
+          </div>
+
+          <%# 4 %>
+          <div class="group relative lg:mt-12">
+            <div class="w-full aspect-[3/4] rounded-[2rem] overflow-hidden relative shadow-md transition-transform duration-500 group-hover:scale-[1.02]">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEdC02y574J8qFS9EIWi2Z5yoTaMxz-BmV5Qx0vI3AeNnWdfBF3I0N2hBLVKqiFR_U52RxwXqYPRDoR8FRBL0mKqmDmBTrCTzSYnz59i56nroqN94ASyo0wrku8qm0LXrelGlOpAW1FHCxWC5H-LaGjwVogjHRB7mk-MfROGie4ABSOZ5hcMCcS_jD1tIi-Z9Oq8AyJyN3A_7dv7piIf-8HC1gEhn-xxkk6pmY2HszWpoogJkQXgmmeW_FrUCs_kpq6GGkWJLvw9c"
+                alt="Science"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-ocean-deep/10 group-hover:bg-ocean-deep/30 transition-all"></div>
+              <div class="absolute bottom-6 left-6 right-6 p-6 breezy-overlay rounded-2xl">
+                <p class="text-xl font-elegant font-bold text-ocean-deep">Science</p>
+                <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-1">10 Courses</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voices（アバター img化） -->
+    <section class="py-24 px-6 lg:px-12 bg-sky-breeze/20 overflow-hidden">
+      <div class="max-w-[1280px] mx-auto relative">
+        <div class="grid lg:grid-cols-3 gap-16 items-center">
+          <div class="lg:col-span-1">
+            <h2 class="text-5xl font-elegant text-ocean-deep mb-8">Voices of the <span class="italic text-sakura-dark">Spring</span>.</h2>
+            <p class="text-slate-500 font-light mb-10 leading-relaxed">Hear from those who found their sunlight in our digital garden.</p>
+
+            <div class="flex items-center gap-6">
+              <div class="flex -space-x-4">
+                <img class="w-12 h-12 rounded-full border-4 border-white shadow-sm object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFuVcIIm8ZvqZr4F2DXQ7T_XxzcbhI82HeP8_kkUfcAhSJ7iOqg6KsWxg78jCwVnoL3TXiPeNm2nCCVPmzAq2X4YJeepNqSgD-8nnJVJUquBDcG6EqUvVyId1VN210t7W10WnUQ64j0AZrx6u6qShmySQL-YhMz0Fkn5X_a3eDQRSE4yCcxppjcp_8E_YHxJ10F1i_oIS9rcyJCnCKhE6l0FkAQuC989gHrogpGq1hWCYlxGHBnFs-X8Ds15IFcFT7FMyGsYpbutk"
+                     alt="利用者の写真 1" loading="lazy" />
+                <img class="w-12 h-12 rounded-full border-4 border-white shadow-sm object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZV_ek0uwkHTzFol_dTre4td2R3DynjlQHyr6PfW-Jw6G2_UmCfzi6kutAfnCOr0q_Mz2mvr-e1cqDGdXCRnVg0ZV2RhYzfNu6mw43_FX1Sk_ISwoVLOSGpnlFMNl42eOLeu-XE5_cwrjQEQdSWBEUjVNxnfHNI--_ilFEu1pQLr4YntfhXQu97NnJD-MjXAqo0WO75Ys5mtuSVWicItJVFs385BV1d_GjniOuNFk7LAbiyeXThL7oNywrnEs0y35_ONPaZdxjEqU"
+                     alt="利用者の写真 2" loading="lazy" />
+                <img class="w-12 h-12 rounded-full border-4 border-white shadow-sm object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcF1udLae9NeHp8jiDCyIZDhElDcTYgngtrW4kCUxs8we4_zG-ALIN3RU3S78EpS7-WvSolL9dBUebpl0VSyhHf9D-l3q9ltKTB-eWz8b05fedaxoO33sWq9ousePzgZMZuaVdvUfAKCKsE_sCiiaZ7ogeAWQfcriF8LaT2CSpcURk0aynehquY_M6PGUR-LzJoN6hGaQTVi6UewWeiABSRLZytvkFsBTaZfwZrd0ESmasecDuekizk4xXSSheI0GtOojk34hqi2E"
+                     alt="利用者の写真 3" loading="lazy" />
+              </div>
+              <p class="text-xs font-bold uppercase tracking-widest text-ocean-deep">2k+ Blooming Hearts</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+            <div class="breezy-overlay p-10 rounded-[3rem] shadow-sm relative border border-white">
+              <span class="material-symbols-outlined text-sakura-pink/30 text-7xl absolute top-4 right-8">format_quote</span>
+              <p class="text-xl font-elegant italic text-slate-600 mb-8 relative z-10 leading-relaxed">
+                "SakuLabo offered me the space to breathe and learn at my own rhythm. I feel like I've finally found my season."
+              </p>
+              <div class="flex items-center gap-4">
+                <img class="w-14 h-14 rounded-full border-2 border-sakura-pink object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaGcM-SsQMWXg8P-AiLjLjxjUydPTJ_ZzM-WTw8zUVdAW27mMhzDCXzPQmVcK9SuW5C33L7_DBYokjZY2U-lp8Cd6WhuADYuqsI0jR3QGxa37N5KxyjjqpLAIeVnzPYOrAoPBoE1-CZGUsux1b00WX0E7lBaocwDTZVaHnxBpmoUeCptmi5pdWvcYq2ezXxic_oWjLZZDXod1wI5ou6x_AhhggCo3gXbDfxkUUPokkenD1MejoDYuzGCuLKorNKO0E7RFJMF6yecs"
+                     alt="David Chen" loading="lazy" />
+                <div>
+                  <p class="font-elegant font-bold text-ocean-deep">David Chen</p>
+                  <p class="text-[10px] uppercase tracking-[0.15em] text-slate-400">Physics Scholar</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="breezy-overlay p-10 rounded-[3rem] shadow-sm relative border border-white">
+              <span class="material-symbols-outlined text-sakura-pink/30 text-7xl absolute top-4 right-8">format_quote</span>
+              <p class="text-xl font-elegant italic text-slate-600 mb-8 relative z-10 leading-relaxed">
+                "The atmosphere here is purely refreshing. It's more than a school; it's a place where passion is tended with care."
+              </p>
+              <div class="flex items-center gap-4">
+                <img class="w-14 h-14 rounded-full border-2 border-sakura-pink object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOe7K3frHm-YAHtHi8PZDZObgd1eKkCA7fhkFKWx-gE4x9vGDwz71xH25jh2TNK9SLGL6bEdfWNAtuBNp1xlQVWDyfq_VcLbUbWbWmQJ-fV7tM5u1zh_G5PHdUVS9gmjzHirhD8kcjb5wMGmVsQLKjdg1pklltkgToiwPYuHNxvmvhAxPrd59vgyWcWiFHcpGAxyzeZwRu50jWMv84bychnCMvsdt3zZ8zc4fK-zkc62yZWOkbc9gOSIOySoyjt2KHvE4XiyALU4U"
+                     alt="Sarah Jenkins" loading="lazy" />
+                <div>
+                  <p class="font-elegant font-bold text-ocean-deep">Sarah Jenkins</p>
+                  <p class="text-[10px] uppercase tracking-[0.15em] text-slate-400">Visual Arts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-6 lg:px-12 py-32 bg-pure-white">
+      <div class="max-w-[1000px] mx-auto bg-gradient-to-br from-sakura-pink via-white to-sky-breeze rounded-[4rem] p-16 lg:p-24 text-center relative overflow-hidden shadow-2xl border border-sakura-pink/20">
+        <div class="absolute inset-0 opacity-40 pointer-events-none"
+             style="background-image: radial-gradient(circle at 2px 2px, #F08080 1px, transparent 0); background-size: 60px 60px;"></div>
+
+        <div class="relative z-10">
+          <h2 class="text-5xl lg:text-7xl font-elegant text-ocean-deep mb-8 leading-tight">
+            Begin your <span class="italic text-sakura-dark">bloom</span> today.
+          </h2>
+          <p class="text-slate-600 text-lg mb-12 max-w-xl mx-auto font-light">
+            Join SakuLabo this spring and experience education that feels like a breath of fresh air.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <input class="w-full sm:w-80 bg-white/60 border border-sakura-pink/30 rounded-full px-8 py-5 focus:outline-none focus:ring-2 focus:ring-sakura-pink/50 text-ocean-deep placeholder:text-ocean-deep/50"
+                   placeholder="Your email address" type="email" />
+            <button class="bg-ocean-deep text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-ocean-deep/90 transition-all shadow-xl">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-sky-breeze/30 py-20 px-6 lg:px-12 border-t border-sakura-pink/10">
+    <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+      <div class="flex flex-col gap-8">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 bg-sakura-pink flex items-center justify-center rounded-full text-white">
+            <span class="material-symbols-outlined text-lg">eco</span>
+          </div>
+          <h2 class="text-xl font-elegant font-bold tracking-tight text-ocean-deep">SakuLabo</h2>
+        </div>
+        <p class="text-slate-500 text-sm font-light leading-relaxed">
+          Nurturing the beauty of learning through gentle innovation and a community that cares.
+        </p>
+
+        <div class="flex gap-4">
+          <a class="w-10 h-10 rounded-full bg-white text-sakura-dark flex items-center justify-center hover:bg-sakura-pink hover:text-white transition-all shadow-sm" href="#">
+            <span class="material-symbols-outlined text-xl">spa</span>
+          </a>
+          <a class="w-10 h-10 rounded-full bg-white text-sakura-dark flex items-center justify-center hover:bg-sakura-pink hover:text-white transition-all shadow-sm" href="#">
+            <span class="material-symbols-outlined text-xl">language</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <h3 class="font-elegant font-bold text-ocean-deep text-lg">Pathways</h3>
+        <ul class="space-y-4 text-sm font-light text-slate-500">
+          <li><a class="hover:text-sakura-dark transition-colors" href="#">How we Grow</a></li>
+          <li><a class="hover:text-sakura-dark transition-colors" href="#">The Garden</a></li>
+          <li><a class="hover:text-sakura-dark transition-colors" href="#">Seasons &amp; Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <h3 class="font-elegant font-bold text-ocean-deep text-lg">Our Roots</h3>
+        <ul class="space-y-4 text-sm font-light text-slate-500">
+          <li><a class="hover:text-sakura-dark transition-colors" href="#">About SakuLabo</a></li>
+          <li><a class="hover:text-sakura-dark transition-colors" href="#">Careers</a></li>
+          <li><a class="hover:text-sakura-dark transition-colors" href="#">Privacy Garden</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <h3 class="font-elegant font-bold text-ocean-deep text-lg">Connect</h3>
+        <p class="text-slate-500 text-sm font-light flex items-center gap-3">
+          <span class="material-symbols-outlined text-lg text-sakura-pink">mail</span>
+          hello@sakulabo.edu
+        </p>
+        <p class="text-slate-500 text-sm font-light flex items-center gap-3">
+          <span class="material-symbols-outlined text-lg text-sakura-pink">location_on</span>
+          Kyoto, Japan
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-[1280px] mx-auto mt-20 pt-10 border-t border-sakura-pink/10 flex justify-between items-center flex-wrap gap-6">
+      <p class="text-slate-400 text-[10px] uppercase tracking-widest">© 2024 SakuLabo. Flowering globally.</p>
+      <div class="flex gap-10">
+        <a class="text-slate-400 text-[10px] uppercase tracking-widest hover:text-sakura-dark" href="#">Spring Terms</a>
+        <a class="text-slate-400 text-[10px] uppercase tracking-widest hover:text-sakura-dark" href="#">Privacy policy</a>
+      </div>
+    </div>
+  </footer>
 </div>

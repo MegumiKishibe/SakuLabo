@@ -1,0 +1,48 @@
+/* SakuLabo Landing Page only (scoped) */
+@keyframes sakulabo-fall {
+  0%   { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(100vh) translateX(100px) rotate(360deg); opacity: 0; }
+}
+
+.sakulabo-lp {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sakulabo-lp h1,
+.sakulabo-lp h2,
+.sakulabo-lp h3,
+.sakulabo-lp .font-elegant {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.sakulabo-lp .breezy-overlay {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+.sakulabo-lp .glass-nav {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.sakulabo-lp .gradient-bg {
+  background: linear-gradient(135deg, #ffffff 0%, #e0f2f7 50%, #ffd1dc 100%);
+}
+
+.sakulabo-lp .petal {
+  position: absolute;
+  background-color: #ffd1dc;
+  border-radius: 150% 0 150% 0;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sakulabo-lp .petal:nth-child(1) { width: 15px; height: 15px; left: 10%; animation: sakulabo-fall 10s linear infinite; animation-delay: 0s; }
+.sakulabo-lp .petal:nth-child(2) { width: 10px; height: 10px; left: 25%; animation: sakulabo-fall 12s linear infinite; animation-delay: 2s; }
+.sakulabo-lp .petal:nth-child(3) { width: 12px; height: 12px; left: 45%; animation: sakulabo-fall 15s linear infinite; animation-delay: 4s; }
+.sakulabo-lp .petal:nth-child(4) { width: 18px; height: 18px; left: 65%; animation: sakulabo-fall 11s linear infinite; animation-delay: 1s; }
+.sakulabo-lp .petal:nth-child(5) { width: 14px; height: 14px; left: 85%; animation: sakulabo-fall 14s linear infinite; animation-delay: 6s; }
+.sakulabo-lp .petal:nth-child(6) { width: 11px; height: 11px; left: 35%; animation: sakulabo-fall 13s linear infinite; animation-delay: 8s; }
