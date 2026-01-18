@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "sakura_study_path/index"
   root "home#index"
 
-  resources :courses, only: [:index]
+  resources :courses, only: [ :index ]
 
   post "enroll", to: "enrollments#create" # LPのGet Started送信先
 
