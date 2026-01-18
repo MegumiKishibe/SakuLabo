@@ -1,0 +1,26 @@
+<div class="sakulabo-lp bg-[#FDFCFB] text-text-slate min-h-screen">
+  <div class="relative z-10 pt-32 pb-24 px-6">
+    <div class="max-w-[900px] mx-auto">
+      <h1 class="text-5xl font-elegant text-ocean-deep mb-6 text-center">Your Result</h1>
+
+      <div class="breezy-overlay border border-sakura-pink/20 rounded-3xl p-8 mb-10">
+        <p class="text-xs uppercase tracking-[0.2em] text-slate-500 mb-2">Top Type</p>
+        <p class="text-2xl font-elegant text-ocean-deep font-semibold"><%= @top[:label] %></p>
+        <p class="text-slate-500 mt-2">Score: <%= @top[:score] %></p>
+      </div>
+
+      <div class="space-y-3">
+        <% @scores.each do |s| %>
+          <div class="breezy-overlay border border-slate-200 rounded-2xl p-5 flex items-center justify-between">
+            <p class="font-elegant text-ocean-deep text-lg"><%= s[:label] %></p>
+            <p class="text-slate-500">Score: <%= s[:score] %></p>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="text-center mt-12">
+        <%= link_to "Back to Questions", sakura_study_path_path, class: "inline-flex items-center justify-center bg-sakura-dark/10 hover:bg-sakura-dark/20 text-sakura-dark px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all" %>
+      </div>
+    </div>
+  </div>
+</div>

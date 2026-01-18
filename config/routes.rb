@@ -7,7 +7,10 @@ Rails.application.routes.draw do
 
   post "enroll", to: "enrollments#create" # LPのGet Started送信先
 
-  get "/sakura-study-path", to: "sakura_study_path#index", as: :sakura_study_path
+  get "/sakura_study_path", to: "sakura_study_path#index", as: :sakura_study_path
+  get  "/sakura_study_path/result", to: "sakura_study_path#result", as: :sakura_study_path_result
+  post "/sakura_study_path/result", to: "sakura_study_path#result"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
