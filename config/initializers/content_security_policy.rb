@@ -23,3 +23,10 @@
 #   # Report violations without enforcing the policy.
 #   # config.content_security_policy_report_only = true
 # end
+Rails.application.config.content_security_policy do |p|
+  p.default_src :self
+  p.script_src  :self, :https, :unsafe_inline
+  p.style_src   :self, :https, :unsafe_inline
+  p.font_src    :self, :https, :data
+  p.img_src     :self, :https, :data
+end

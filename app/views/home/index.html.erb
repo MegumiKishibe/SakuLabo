@@ -273,13 +273,17 @@
             Join SakuLabo this spring and experience education that feels like a breath of fresh air.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <input class="w-full sm:w-80 bg-white/60 border border-sakura-pink/30 rounded-full px-8 py-5 focus:outline-none focus:ring-2 focus:ring-sakura-pink/50 text-ocean-deep placeholder:text-ocean-deep/50"
-                   placeholder="Your email address" type="email" />
-            <button class="bg-ocean-deep text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-ocean-deep/90 transition-all shadow-xl">
-              Get Started
-            </button>
-          </div>
+          <%= form_with url: courses_path, method: :get, local: true,
+              class: "flex flex-col sm:flex-row gap-4 justify-center" do %>
+
+            <%= email_field_tag :email, params[:email],
+                class: "w-full sm:w-80 bg-white/60 border border-sakura-pink/30 rounded-full px-8 py-5 focus:outline-none focus:ring-2 focus:ring-sakura-pink/50 text-ocean-deep placeholder:text-ocean-deep/50",
+                placeholder: "Your email address",
+                required: true %>
+
+            <%= submit_tag "Get Started",
+                class: "bg-ocean-deep text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-ocean-deep/90 transition-all shadow-xl" %>
+          <% end %>
         </div>
       </div>
     </section>

@@ -1,0 +1,13 @@
+.sakura-gradient {
+  background: linear-gradient(135deg, #ffdded 0%, #ddeeff 100%);
+}
+.glass-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.petal-accent {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.4;
+}

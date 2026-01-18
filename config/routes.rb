@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  get "courses/index"
   get "sakura_study_path/index"
   root "home#index"
+
+  resources :courses, only: [:index]
+
+  post "enroll", to: "enrollments#create" # LPのGet Started送信先
 
   get "/sakura-study-path", to: "sakura_study_path#index", as: :sakura_study_path
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
