@@ -1,35 +1,133 @@
-<div class="container sakura-study-path">
-  <div class="card">
-    <h1 class="title">Sakura Study Path</h1>
-    <p class="subtitle">当てはまる項目を5〜10個選んでください。</p>
+<div class="sakulabo-lp relative overflow-hidden">
+  <div class="petals absolute inset-0 pointer-events-none">
+    <span class="petal"></span>
+    <span class="petal"></span>
+    <span class="petal"></span>
+    <span class="petal"></span>
+    <span class="petal"></span>
+    <span class="petal"></span>
+  </div>
 
-    <div class="question">
-      <p class="hint"><span id="count">0</span>/10 選択（5個以上で結果表示）</p>
+  <section class="gradient-bg">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-sakura-pink/30">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <%= link_to root_path, class: "flex items-center gap-3 hover:opacity-90 transition", aria: { label: "ホームへ" } do %>
+        <div class="w-10 h-10 bg-sakura-pink flex items-center justify-center rounded-full text-white shadow-sm">
+          <span class="material-symbols-outlined text-2xl">eco</span>
+        </div>
+        <h2 class="text-2xl font-elegant font-bold tracking-wide text-ocean-deep">SakuLabo</h2>
+      <% end %>
 
-      <div class="options">
-        <button type="button" class="option-btn" data-type="photo">写真みたいに鮮明に思い出せる</button>
-        <button type="button" class="option-btn" data-type="photo">図・写真があると理解が速い</button>
+      <nav class="hidden md:flex items-center gap-10">
+        <a class="text-xs uppercase tracking-widest font-semibold hover:text-sakura-dark transition-colors" href="#">Diagnosis</a>
+        <a class="text-xs uppercase tracking-widest font-semibold hover:text-sakura-dark transition-colors" href="#">Methodology</a>
+        <a class="text-xs uppercase tracking-widest font-semibold hover:text-sakura-dark transition-colors" href="#">Support</a>
+      </nav>
 
-        <button type="button" class="option-btn" data-type="3d">道順や場所を立体的に覚える</button>
-        <button type="button" class="option-btn" data-type="3d">顔の変化に気づきやすい</button>
+      <div class="flex items-center gap-4">
+        <button class="bg-sakura-dark/10 hover:bg-sakura-dark/20 text-sakura-dark px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </header>
 
-        <button type="button" class="option-btn" data-type="lang_movie">文章で情景が浮かぶ</button>
-        <button type="button" class="option-btn" data-type="lang_movie">見たものを言葉で表現しやすい</button>
+  <!-- Main -->
+  <main class="relative z-10 pt-32 pb-24 px-6">
+    <div class="max-w-[800px] mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-sakura-pink/30 text-ocean-deep rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+          <span class="w-1.5 h-1.5 bg-sakura-pink rounded-full"></span>
+          Interactive Assessment
+        </div>
 
-        <button type="button" class="option-btn" data-type="lang_abstract">図解・相関図にすると理解が深まる</button>
-        <button type="button" class="option-btn" data-type="lang_abstract">ノートを整理してまとめるのが得意</button>
-
-        <button type="button" class="option-btn" data-type="aud_lang">読むより聞くほうが理解しやすい</button>
-        <button type="button" class="option-btn" data-type="aud_sound">音色や音程の違いに敏感</button>
+        <h1 class="text-5xl lg:text-6xl font-elegant text-ocean-deep mb-4">Learning Style Diagnosis</h1>
+        <p class="text-slate-500 font-light italic text-lg">Discover the unique way your mind blossoms.</p>
       </div>
 
-      <button id="resultBtn" class="btn result-btn" type="button" disabled>診断結果を見る</button>
+      <% questions = [
+        { id: 1,  type: "v_photo",   text: "説明を聞くとき、図や画像・スクショがあると一気に理解が進む。" },
+        { id: 2,  type: "v_photo",   text: "思い出すときは“場面の静止画”がパッと浮かぶことが多い。" },
 
-      <div id="result" class="result" style="display:none;"></div>
-    </div>
+        { id: 3,  type: "v_3d",      text: "初めて行った道でも、景色の流れ（動画）として覚えていて迷いにくい。" },
+        { id: 4,  type: "v_3d",      text: "人の表情や見た目の変化にすぐ気づくほうだ。" },
 
-    <div class="actions">
-      <%= link_to "ホームへ戻る", root_path, class: "btn" %>
+        { id: 5,  type: "l_movie",   text: "文章を読むと、頭の中で情景が映像のように浮かぶ。" },
+        { id: 6,  type: "l_movie",   text: "見たものを言葉で説明したり、たとえ話にするのが得意だ。" },
+
+        { id: 7,  type: "l_abs",     text: "情報は“見出し→要点→結論”のように整理すると理解しやすい。" },
+        { id: 8,  type: "l_abs",     text: "時系列・相関図・箇条書きでまとめると頭がスッキリする。" },
+
+        { id: 9,  type: "a_words",   text: "文字で読むより、誰かの説明を“聞く”ほうが理解が速い。" },
+        { id: 10, type: "a_words",   text: "会話の内容を、メモなしでも比較的覚えていられる。" },
+
+        { id: 11, type: "a_sound",   text: "歌は歌詞より先にメロディやリズムが頭に残る。" },
+        { id: 12, type: "a_sound",   text: "音色の違い・音程のズレなどに気づきやすい。" }
+      ] %>
+
+      <%= form_with url: sakura_study_path_result_path, method: :post, local: true, data: { turbo: false } do %>
+        <div class="space-y-4 mb-16">
+          <% questions.each_with_index do |q, i| %>
+            <% is_pink = i.even? %>
+
+            <div class="quiz-card breezy-overlay border <%= is_pink ? "border-sakura-pink/20" : "border-sky-breeze/40" %> rounded-3xl p-8 flex items-start justify-between gap-6 group">
+              <div class="flex-1">
+                <div class="flex items-baseline gap-4 mb-4">
+                  <span class="text-xs font-bold tracking-[0.2em] <%= is_pink ? "text-sakura-dark/60" : "text-ocean-deep/60" %> uppercase">
+                    Question <%= "%02d" % (i + 1) %>
+                  </span>
+                  <h3 class="text-xl font-elegant font-semibold text-ocean-deep">
+                    <%= q[:text] %>
+                  </h3>
+                </div>
+
+                <!-- 1〜5の回答 -->
+                <div class="flex flex-wrap gap-3">
+                  <% (1..5).each do |score| %>
+                    <label class="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-slate-200 hover:border-sakura-pink/40 hover:bg-white cursor-pointer transition">
+                      <%= radio_button_tag "answers[#{q[:id]}][score]", score, false, required: true, class: "accent-sakura-pink" %>
+                      <%= hidden_field_tag "answers[#{q[:id]}][type]", q[:type] %>
+                      <span class="text-xs text-slate-600">
+                        <%= score %>
+                      </span>
+                    </label>
+                  <% end %>
+                </div>
+
+                <p class="mt-3 text-[11px] text-slate-400">
+                  1 = 当てはまらない / 3 = どちらとも言えない / 5 = とても当てはまる
+                </p>
+              </div>
+
+              <span class="material-symbols-outlined <%= is_pink ? "text-sakura-pink" : "text-ocean-deep/40" %>">
+                chevron_right
+              </span>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="text-center pt-4">
+          <button type="submit" class="group relative inline-flex items-center justify-center bg-ocean-deep text-white px-16 py-6 rounded-full font-elegant text-2xl tracking-widest shadow-2xl hover:bg-ocean-deep/90 transition-all transform hover:scale-[1.02]">
+            SEE RESULTS
+            <span class="ml-4 material-symbols-outlined group-hover:translate-x-2 transition-transform">auto_awesome</span>
+          </button>
+        </div>
+      <% end %>
     </div>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-20 px-6 lg:px-12 border-t border-sakura-pink/10 relative z-10">
+    <div class="max-w-[1280px] mx-auto flex flex-col items-center gap-8">
+      <div class="flex items-center gap-3 grayscale opacity-60">
+        <div class="w-8 h-8 bg-sakura-pink flex items-center justify-center rounded-full text-white">
+          <span class="material-symbols-outlined text-lg">eco</span>
+        </div>
+        <h2 class="text-xl font-elegant font-bold tracking-tight text-ocean-deep">SakuLabo</h2>
+      </div>
+      <p class="text-slate-400 text-[10px] uppercase tracking-widest">© 2024 SakuLabo. Your journey is unique.</p>
+    </div>
+  </footer>
 </div>
+</section>
